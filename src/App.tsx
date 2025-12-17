@@ -1213,7 +1213,7 @@ export default function App() {
     return getEnemyUnit(actionModal.player, actionModal.targetId);
   };
 
-  const getWeaponProfiles = (weaponName: string, raw: string) => {
+  const getWeaponProfiles = (_weaponName: string, raw: string) => {
     const t = raw || "";
     if (t.toLowerCase().includes("multi-profile") && t.includes("FRAG:") && t.includes("KRAK:")) {
       const frag = t.split("FRAG:")[1]?.split("KRAK:")[0]?.replace(/;\s*$/, "").trim() || "";
